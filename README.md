@@ -5,13 +5,30 @@ NSObject category to define a description method that automatically lists all pr
 
 Writing a complete `description` method can quickly become exhausting if your objects have lots of properties. Think of all the time you could use for more useful stuff on your projects if a `description` method could automatically describe all properties of your custom objects.
 
+
+
+## Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects. You can install it by using the following command in your terminal:
+
+```
+sudo gem install cocoapods
+```
+
+### Podfile
+
+```ruby
+pod 'NSObject-LNTXAutoDescription', '~> 1.0'
+```
+
+
 ## How to use it
 
 The `NSObject+LNTXAutoDescription` category automatically defines a `lntx_autoDescription` method that does all you need.
 
 Let say you have a `Person` class that defines a few properties:
 
-```
+```objective-c
 @interface Person : NSObject
 
 @property (nonatomic, copy) NSString *firstName;
@@ -23,7 +40,7 @@ Let say you have a `Person` class that defines a few properties:
 
 You can now call `lntx_autoDescription` on an instance of that class:
 
-```
+```objective-c
 Person *person = [[Person alloc] init];
 person.firstName = @"Lenny";
 person.lastName = @"Ticks";
@@ -34,13 +51,13 @@ NSLog(@"%@", [person lntx_autoDescription]);
 
 This will produce the following output:
 
-```
+```objective-c
 <Person: firstName=Lenny, lastName=Ticks, age=42>
 ```
 
 You can also implement it in the standard `description` method:
 
-```
+```objective-c
 #import "NSObject+LNTXAutoDescription"
 
 @implementation Person

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "NSObject-LNTXAutoDescription"
   s.version      = "1.0"
-  s.summary      = "UIImageView category that let you define an automatic description method."
+  s.summary      = "NSObject category that let you define an automatic description method."
   s.description  = "NSObject category to define a description method that automatically lists all properties of a specific instance."
   s.homepage     = "https://github.com/linitix/NSObject-LNTXAutoDescription"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }

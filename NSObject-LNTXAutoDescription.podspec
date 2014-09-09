@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NSObject-LNTXAutoDescription"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "NSObject category that let you define an automatic description method."
   s.description  = "NSObject category to define a description method that automatically lists all properties of a specific instance."
   s.homepage     = "https://github.com/linitix/NSObject-LNTXAutoDescription"
